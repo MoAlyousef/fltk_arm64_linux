@@ -37,4 +37,4 @@ jobs:
       run: |
         git clone https://github.com/fltk/fltk --depth=1
         cd fltk
-        cmake -Bbin -S. -GNinja -DCMAKE_SYSTEM_NAME=Linux -DCMAKE_SYSTEM_PROCESSOR=aarch64 -DFLTK_BUILD_EXAMPLES=ON -DFLTK_BUILD_FLUID=OFF -DFLTK_BUILD_TEST=OFF -DFLTK_BUILD_FLTK_OPTIONS=OFF && cmake --build bin
+        cmake -Bbin -S. -GNinja -DCMAKE_TOOLCHAIN_FILE=../mytoolchainfile.cmake -DFLTK_BUILD_EXAMPLES=ON -DFLTK_BUILD_FLUID=OFF -DFLTK_BUILD_TEST=OFF -DFLTK_BUILD_FLTK_OPTIONS=OFF && cmake --build bin
